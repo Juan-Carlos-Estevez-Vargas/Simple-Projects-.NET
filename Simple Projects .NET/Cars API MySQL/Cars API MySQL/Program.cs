@@ -1,3 +1,6 @@
+using Cars_API_MySQL.Data;
+using Cars_API_MySQL.Data.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var mySqlConfiguration = new MySqlConfiguration(builder.Configuration.GetConnectionString("MySqlConnection"));
+builder.Services.AddSingleton(mySqlConfiguration);
+
+builder.Services.AddScoped<ICarRepository, CarRepository>();
 
 var app = builder.Build();
 
