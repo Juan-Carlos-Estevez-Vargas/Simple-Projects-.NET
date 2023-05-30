@@ -1,5 +1,6 @@
 using Cars_API_MySQL.Data;
 using Cars_API_MySQL.Data.Repositories;
+using MySql.Data.MySqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var mySqlConfiguration = new MySqlConfiguration(builder.Configuration.GetConnectionString("MySqlConnection"));
-builder.Services.AddSingleton(mySqlConfiguration);
+builder.Services.AddSingleton(new MySqlConnection(builder.Configuration.GetConnectionString("MySqlConnection")));
 
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 
