@@ -1,0 +1,12 @@
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\bin\Debug\net6.0\Cars API MySQL.Model.deps.json
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\bin\Debug\net6.0\Cars API MySQL.Model.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\bin\Debug\net6.0\Cars API MySQL.Model.pdb
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.csproj.AssemblyReference.cache
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.AssemblyInfoInputs.cache
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.AssemblyInfo.cs
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.csproj.CoreCompileInputs.cache
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\refint\Cars API MySQL.Model.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\Cars API MySQL.Model.pdb
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Model\obj\Debug\net6.0\ref\Cars API MySQL.Model.dll

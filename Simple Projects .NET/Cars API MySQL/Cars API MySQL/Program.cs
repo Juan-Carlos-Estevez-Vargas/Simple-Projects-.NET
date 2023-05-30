@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton(new MySqlConnection(builder.Configuration.GetConnectionString("MySqlConnection")));
+var mySqlConfiguration = new MySqlConnection(builder.Configuration.GetConnectionString("MySqlConnection"));
+builder.Services.AddSingleton(mySqlConfiguration);
 
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 

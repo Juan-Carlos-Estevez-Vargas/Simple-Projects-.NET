@@ -8,6 +8,10 @@ namespace Cars_API_MySQL.Data.Repositories
     {
         private readonly MySqlConfiguration _connectionString;
 
+        public CarRepository()
+        {
+        }
+
         public CarRepository(MySqlConfiguration connectionString)
         {
             _connectionString = connectionString;

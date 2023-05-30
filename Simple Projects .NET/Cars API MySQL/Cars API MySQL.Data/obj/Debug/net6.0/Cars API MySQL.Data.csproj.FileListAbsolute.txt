@@ -1,0 +1,15 @@
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\bin\Debug\net6.0\Cars API MySQL.Data.deps.json
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\bin\Debug\net6.0\Cars API MySQL.Data.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\bin\Debug\net6.0\Cars API MySQL.Data.pdb
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\bin\Debug\net6.0\Cars API MySQL.Model.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\bin\Debug\net6.0\Cars API MySQL.Model.pdb
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.csproj.AssemblyReference.cache
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.AssemblyInfoInputs.cache
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.AssemblyInfo.cs
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.csproj.CoreCompileInputs.cache
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.csproj.CopyComplete
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\refint\Cars API MySQL.Data.dll
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\Cars API MySQL.Data.pdb
+D:\Documents\Programacion\.NET\Simple Projects .NET\Cars API MySQL\Cars API MySQL.Data\obj\Debug\net6.0\ref\Cars API MySQL.Data.dll
