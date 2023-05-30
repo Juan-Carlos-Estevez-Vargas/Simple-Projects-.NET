@@ -1,6 +1,5 @@
 ﻿using Cars_API_MySQL.Data.Repositories;
 using Cars_API_MySQL.Model;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cars_API_MySQL.Controllers

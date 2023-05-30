@@ -1,4 +1,3 @@
-using Cars_API_MySQL.Data;
 using Cars_API_MySQL.Data.Repositories;
 using MySql.Data.MySqlClient;
 

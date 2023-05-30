@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cars_API_MySQL.Data
+﻿namespace Cars_API_MySQL.Data
 {
     public class MySqlConfiguration
     {
-        public MySqlConfiguration(string connectionString) 
+        public MySqlConfiguration(string connectionString)
         {
             ConnectionString = connectionString;
-        } 
+        }
         public string ConnectionString { get; set; }
     }
 }

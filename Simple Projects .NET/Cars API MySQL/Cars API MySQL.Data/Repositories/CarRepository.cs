@@ -1,10 +1,6 @@
 ﻿using Cars_API_MySQL.Model;
+using Dapper;
 using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cars_API_MySQL.Data.Repositories
 {
@@ -12,7 +8,7 @@ namespace Cars_API_MySQL.Data.Repositories
     {
         private readonly MySqlConfiguration _connectionString;
 
-        public CarRepository(MySqlConfiguration connectionString) 
+        public CarRepository(MySqlConfiguration connectionString)
         {
             _connectionString = connectionString;
         }
@@ -22,29 +18,57 @@ namespace Cars_API_MySQL.Data.Repositories
             return new MySqlConnection(_connectionString.ConnectionString);
         }
 
-        public Task<bool> DeleteCar(Car car)
+        public async Task<bool> DeleteCar(Car car)
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+
+            var sql = @" DELETE FROM cars WHERE id = @Id";
+
+            var result = await db.ExecuteAsync(sql, new {Id = car.Id});
+
+            return result > 0;
         }
 
-        public Task<IEnumerable<Car>> GetAllCars()
+        public async Task<IEnumerable<Car>> GetAllCars()
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+
+            var sql = @" SELECT id, make, model, color, year, doors FROM cars";
+
+            return await db.QueryAsync<Car>(sql, new { });
         }
 
-        public Task<Car> GetDetails(int id)
+        public async Task<Car> GetDetails(int id)
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+
+            var sql = @" SELECT id, make, model, color, year, doors FROM cars WHERE id = @Id";
+
+            return await db.QueryFirstOrDefaultAsync<Car>(sql, new { Id = id });
         }
 
-        public Task<bool> InsertCar(Car car)
+        public async Task<bool> InsertCar(Car car)
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+
+            var sql = @" INSERT INTO cars(make, model, color, year, doors) 
+                        VALUES (@Make, @Model, @Color, @Year, @Doors)";
+
+            var result = await db.ExecuteAsync(sql, new { car.Make, car.Model, car.Color, car.Year, car.Doors });
+
+            return result > 0;
         }
 
-        public Task<bool> UpdateCar(Car car)
+        public async Task<bool> UpdateCar(Car car)
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+
+            var sql = @" UPDATE cars SET make = @Make, model = @Model, color = @Color, year = @Year, doors = @Doors) 
+                        WHERE id = @Id";
+
+            var result = await db.ExecuteAsync(sql, new { car.Make, car.Model, car.Color, car.Year, car.Doors, car.Id });
+
+            return result > 0;
         }
     }
 }
