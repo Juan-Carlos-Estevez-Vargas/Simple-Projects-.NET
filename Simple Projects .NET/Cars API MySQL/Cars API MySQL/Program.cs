@@ -10,9 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configuración MySQL
 var mySqlConfiguration = new MySqlConnection(builder.Configuration.GetConnectionString("MySqlConnection"));
 builder.Services.AddSingleton(mySqlConfiguration);
 
+// Configuración Interfaces y clases del proyecto
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 
 var app = builder.Build();

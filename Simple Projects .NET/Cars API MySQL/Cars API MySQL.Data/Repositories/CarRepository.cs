@@ -19,7 +19,8 @@ namespace Cars_API_MySQL.Data.Repositories
 
         protected MySqlConnection dbConnection()
         {
-            return new MySqlConnection(_connectionString.ConnectionString);
+            //return new MySqlConnection(_connectionString.ConnectionString);
+            return new MySqlConnection("server=localhost;port=3306;database=cars_net;uid=root;password=");
         }
 
         public async Task<bool> DeleteCar(Car car)
