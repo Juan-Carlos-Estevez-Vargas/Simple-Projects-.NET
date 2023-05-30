@@ -1,4 +1,5 @@
 ﻿using Cars_API_MySQL.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,18 @@ namespace Cars_API_MySQL.Data.Repositories
 {
     public class CarRepository : ICarRepository
     {
+        private readonly MySqlConfiguration _connectionString;
+
+        public CarRepository(MySqlConfiguration connectionString) 
+        {
+            _connectionString = connectionString;
+        }
+
+        protected MySqlConnection dbConnection()
+        {
+            return new MySqlConnection(_connectionString.ConnectionString);
+        }
+
         public Task<bool> DeleteCar(Car car)
         {
             throw new NotImplementedException();
