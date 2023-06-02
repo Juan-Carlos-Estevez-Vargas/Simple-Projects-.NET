@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Pub.Models;
 
 namespace Pub.Controllers
 {
     public class BrandController : Controller
     {
-        public IActionResult Index()
+        private readonly PubContext _context; 
+
+        public BrandController(PubContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Brands.ToListAsync());
         }
     }
 }
