@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Pub.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<PubContext>(options => 
+{
+    options.UseMySQL(connectionString: builder.Configuration.GetConnectionString("PubContext")); 
+});
 
 var app = builder.Build();
 
