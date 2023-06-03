@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pub.Models;
+using Pub.Models.ViewModels;
 
 namespace Pub.Controllers
 {
@@ -27,10 +28,23 @@ namespace Pub.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create()
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(BeerViewModel model)
         {
-            ViewData["brands"] = new SelectList(_pubContext.Brands, "BrandId", "Name");
-            return View();
+            if (ModelState.IsValid)
+            {
+                var beer = new Beer()
+                {
+                    Name = model.Name,
+                    BrandId = model.BrandId
+                };
+                _pubContext.Add(beer);
+                await _pubContext.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewData["brands"] = new SelectList(_pubContext.Brands, "BrandId", "Name", model.BrandId);
+            return View(model);
         }
     }
 }
